@@ -1,0 +1,263 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+.index-page{
+    font-family: 'Segoe UI', sans-serif;
+    background: #d9e2d8;
+    padding: 25px;
+    color: #0b0b0a;
+}
+
+/* HEADING */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #3a3a3a;
+}
+
+/* ADD BUTTON */
+form[action="/chats/new"] {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form[action="/chats/new"] button {
+    background: #5a67f2;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form[action="/chats/new"] button:hover {
+    background: #4c59e0;
+}
+
+/* CHAT CARD */
+.chat {
+    max-width: 550px;
+    margin: 15px auto;
+    background: #f8f5f5;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 5px solid #5a67f2; /* colorful touch */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: 0.2s;
+}
+
+/* HOVER */
+.chat:hover {
+    transform: translateY(-3px);
+}
+
+/* TEXT */
+.chat p {
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+/* NAME */
+.chat b {
+    color: #4c59e0;
+}
+
+/* MESSAGE BOX */
+.msg {
+    background: #eef2ff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* BUTTONS */
+.msg form {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.msg button {
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 6px;
+    transition: 0.2s;
+}
+
+/* EDIT BUTTON */
+.msg form[action*="edit"] button {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.msg form[action*="edit"] button:hover {
+    background: #bfdbfe;
+}
+
+/* DELETE BUTTON */
+.msg form[action*="DELETE"] button {
+    background: #ffe4e6;
+    color: #dc2626;
+}
+
+.msg form[action*="DELETE"] button:hover {
+    background: #fecdd3;
+}
+
+/* TIME & DATE */
+.chat p:last-child,
+.chat p:nth-last-child(2) {
+    font-size: 11px;
+    color: #888;
+}
+
+/* DIVIDER */
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+
+/* CENTER BODY FIX */
+body {
+    min-height: 100vh;
+}
+
+/* CARD (Edit Page) */
+.card {
+    background:#edf4ec;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 420px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    border-top: 5px solid #5a67f2;
+}
+
+/* HEADING */
+.Editing {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* SUBTEXT */
+.posting {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* TEXTAREA */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdfe4;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* TEXTAREA FOCUS */
+textarea:focus {
+    border-color: #5a67f2;
+    box-shadow: 0 0 0 2px rgba(90,103,242,0.15);
+}
+
+/* BUTTON */
+.editclass {
+    background: #5a67f2;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* BUTTON HOVER */
+.editclass:hover {
+    background: #4c59e0;
+}
+
+/*new.ejs*/
+/* ===== NEW CHAT PAGE ===== */
+
+/* Center form nicely */
+.new-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form container */
+form[action="/chats"] {
+    background: #edf4ec;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 420px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    border-top: 5px solid #5a67f2;
+}
+
+/* Heading */
+form[action="/chats"] h3 {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+/* Inputs & textarea */
+form[action="/chats"] input,
+form[action="/chats"] textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdfe4;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Textarea height */
+form[action="/chats"] textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Focus effect */
+form[action="/chats"] input:focus,
+form[action="/chats"] textarea:focus {
+    border-color: #5a67f2;
+    box-shadow: 0 0 0 2px rgba(90,103,242,0.15);
+}
+
+/* Button */
+form[action="/chats"] button {
+    width: 100%;
+    background: #5a67f2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Hover */
+form[action="/chats"] button:hover {
+    background: #4c59e0;
+}
